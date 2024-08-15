@@ -1,3 +1,14 @@
 body {
   background-color: rgb(237, 237, 237);
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.weatherApp {
+  background-color: white;
+  max-width: 600px;
+  margin: 45px auto;
+  box-shadow: 0 30px 50px rgb(149, 142, 150, 0.08);
+  padding: 10px 30px 30px 30px;
+  border-radius: 16px;
 }

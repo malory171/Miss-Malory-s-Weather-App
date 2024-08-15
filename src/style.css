@@ -4,11 +4,90 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+a {
+  color: rgba(130, 178, 183, 0.6);
+}
 .weatherApp {
   background-color: white;
   max-width: 600px;
   margin: 45px auto;
-  box-shadow: 0 30px 50px rgb(149, 142, 150, 0.08);
-  padding: 10px 30px 30px 30px;
+  box-shadow: 0 30px 50px rgb(149, 142, 150, 0.1);
+  padding: 15px 30px 30px 30px;
   border-radius: 16px;
+}
+header {
+  border-bottom: 1px solid rgb(237, 237, 237);
+  padding: 0 0 30px 0;
+}
+.logo {
+  text-align: center;
+}
+.searchForm {
+  width: 100%;
+}
+.searchFormInput {
+  background-color: rgb(237, 237, 237);
+  border: none;
+  border-radius: 6px;
+  width: 65%;
+  font-size: 16px;
+  font-family: "Patrick Hand", cursive;
+  padding: 15px 20px;
+}
+.searchFormButton {
+  background-color: rgba(130, 178, 183, 0.8);
+  border: none;
+  border-radius: 6px;
+  width: 32%;
+  font-size: 16px;
+  font-family: "Patrick Hand", cursive;
+  color: white;
+  margin-left: 5px;
+  margin-top: 10px;
+  padding: 15px 20px;
+}
+main {
+  padding: 30px 0;
+}
+.weatherAppData {
+  display: flex;
+  justify-content: space-between;
+}
+.weatherAppCity {
+  font-size: 44px;
+  font-weight: 900;
+  margin: 0;
+}
+.weatherAppDetails {
+  margin: 16px 0;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+  line-height: 24px;
+}
+.weatherAppDetails strong {
+  color: rgba(130, 178, 183, 0.6);
+}
+.weatherAppTempContainer {
+  display: flex;
+}
+.weatherAppIcon {
+  font-size: 40px;
+  margin-top: 40px;
+}
+.weatherAppTemp {
+  font-size: 65px;
+  font-weight: bold;
+  margin-left: 7px;
+  margin-top: 20px;
+}
+.weatherAppUnit {
+  font-size: 20px;
+  margin-top: 40px;
+}
+footer {
+  border-top: 1px solid rgb(237, 237, 237);
+  padding: 30px 0 0 0;
+  text-align: center;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
 }

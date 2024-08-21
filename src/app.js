@@ -53,3 +53,26 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Cologne");
+
+function displayForecast() {
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+    <div class="weatherForecastDay">
+    <div class="weatherForecastDate">${day}</div>
+    <div class="weatherForecastIcon">☀️</div>
+    <div class="weatherForecastTemperatures">
+    <div class="weatherForecastTemperature"><strong>23°</strong></div>
+    <div class="weatherForecastTemperature">17°</div>
+    </div>
+    </div>`;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+displayForecast();

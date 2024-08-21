@@ -99,9 +99,9 @@ main {
   line-height: 20px;
 }
 .weatherForecastIcon {
-  text-align: center;
-  font-size: 20px;
-  margin: 5px 0;
+  width: 45px;
+  height: 45px;
+  margin-left: 6px;
 }
 .weatherForecastTemperatures {
   text-align: center;
@@ -110,6 +110,7 @@ main {
   justify-content: center;
   font-weight: 400;
   line-height: 20px;
+  margin-left: 3px;
 }
 .weatherForecastTemperature {
   padding: 0 5px;

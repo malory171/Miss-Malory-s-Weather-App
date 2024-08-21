@@ -16,6 +16,8 @@ function resfreshWeather(response) {
   humidityElement.innerHTML = `${response.data.temperature.humidity} %`;
   windSpeedElement.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
   temperatureElement.innerHTML = Math.round(temperature);
+
+  getForecast(response.data.city);
 }
 function formatDate(date) {
   let minutes = date.getMinutes();
@@ -39,7 +41,7 @@ function formatDate(date) {
 
 function searchCity(city) {
   let apiKey = "a3ab2befb0aeo33880eb42d02209d3et";
-  let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiURL).then(resfreshWeather);
 }
 function handleSearchSubmit(event) {
@@ -54,7 +56,18 @@ searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Cologne");
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "a3ab2befb0aeo33880eb42d02209d3et";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+
+  console.log(apiUrl);
+}
+getForecast("Cologne");
+
+function displayForecast(response) {
+  console.log(response.data);
+
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
   let forecastHtml = "";
 
@@ -75,4 +88,3 @@ function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
-displayForecast();
